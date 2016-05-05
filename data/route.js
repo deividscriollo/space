@@ -104,6 +104,10 @@
             // .segment('prefs', {
             //     templateUrl: 'templates/section1/prefs.html'})                
         .up()
+        .segment('s0', {
+            templateUrl: 'data/registro/view/index.html',
+            controller: 'homeCtrl'
+        }) 
         .segment('registro', {
             templateUrl: 'data/registro/view/index.html',
             controller: 'homeCtrl'
