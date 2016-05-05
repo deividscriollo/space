@@ -1,7 +1,7 @@
     // create the module and name it scotchApp
     
 
-   
+   var app = angular.module('dcApp');
 
     // Lockr.flush()
     // configure our routes
@@ -10,8 +10,20 @@
         $routeSegmentProvider
         .when('/',    's0')
         .when('/Registro',    'registro')
-        .when('/'+'Imbabura',    's1')
+        .when('/Login',    'session')        
         .when('/'+'Imbabura/home',    's1.home')
+        .when('/'+'Imbabura/Corporativo',    's1.corporativo')
+        .when('/'+'Imbabura/Tarifa',    's1.tarifa')
+        .when('/'+'Imbabura/Programacion',    's1.programacion')
+        .when('/'+'Imbabura/Podcast',    's1.podcast')
+        .when('/'+'Imbabura/Noticias',    's1.noticias')
+        .when('/'+'Imbabura/Contactos',    's1.contactos')
+        .when('/'+'Imbabura/Despertador',    's1.despertador')
+        .when('/'+'Imbabura/LaSartenPorElMango',    's1.sarten')
+        .when('/'+'Imbabura/Inbox',    's1.inbox')
+        .when('/'+'Imbabura/LosHP',    's1.hp')
+        .when('/'+'Imbabura/CodigoDeontologico',    's1.codigo')
+        .when('/'+'Imbabura/TarifasAsesor/:id',    's1.tarifasasesor')
         
         
         .when('/'+'SantoDomingo',    's2')
@@ -105,20 +117,16 @@
             //     templateUrl: 'templates/section1/prefs.html'})                
         .up()
         .segment('s0', {
-            templateUrl: 'data/registro/view/index.html',
-            controller: 'homeCtrl'
-        }) 
+            templateUrl: 'data/home/view/index.html',
+            // controller: 'homeCtrl'
+        })   
         .segment('registro', {
             templateUrl: 'data/registro/view/index.html',
-            controller: 'homeCtrl'
-        })   
-        .segment('registroas', {
-            templateUrl: 'data/imbabura/home.html',
-            controller: 'homeCtrl'
+            // controller: 'homeCtrl'
         })
-        .segment('s3', {
-            templateUrl: 'data/imbabura/home.html',
-            controller: 'homeCtrl'
+        .segment('session', {
+            templateUrl: 'data/session/view/index.html',
+            // controller: 'homeCtrl'
         })
     });
 
