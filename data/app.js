@@ -32,12 +32,11 @@
     // // configure our routes
     
 
-    // app.controller('mainController', function($scope, $rootScope, $localStorage){
-    //     $rootScope.$on('$routeChangeStart', function(event, currRoute, prevRoute){
-    //         $rootScope.animation = currRoute.animation;
-    //     });
-    //     // $scope.sucursal=datainfo.sucursal[0];
-    //     // console.log($scope.sucursal);
-    // });
+    app.controller('homeCtrl', function($scope, $rootScope, $localStorage){
+       $scope.x = 6
+    });
 
+     app.controller('hofmeCtrl', function($scope, $rootScope, $localStorage){
+       
+    });
 
