@@ -106,7 +106,7 @@
         .up()
         .segment('registro', {
             templateUrl: 'data/registro/view/index.html',
-            // controller: 'homeCtrl'
+            controller: 'homeCtrl'
         })   
         .segment('registroas', {
             templateUrl: 'data/imbabura/home.html',
