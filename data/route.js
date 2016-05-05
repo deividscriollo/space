@@ -1,33 +1,7 @@
     // create the module and name it scotchApp
     
 
-    app.factory('service', function($http){
-        var service = {
-            async: function() {
-                    var promise = $http({
-                        url:"app.php", 
-                        method: 'POST',
-                        data: {methods: 'info'}
-                    }).then(function (response) {
-                    return response.data;
-                });
-                return promise;
-            },
-            general:function(typeservices){
-                    var promise = $http.post("app.php", {methods: typeservices}).then(function (response) {
-                    return response.data;
-                });
-                return promise;
-            },
-            general:function(typeservices, url, data){
-                    var promise = $http.post(url, {methods: typeservices, data}).then(function (response) {
-                    return response.data;
-                });
-                return promise;
-            }
-        };
-        return service;
-    });
+   
 
     // Lockr.flush()
     // configure our routes
@@ -35,20 +9,9 @@
 
         $routeSegmentProvider
         .when('/',    's0')
+        .when('/Registro',    'registro')
         .when('/'+'Imbabura',    's1')
         .when('/'+'Imbabura/home',    's1.home')
-        .when('/'+'Imbabura/Corporativo',    's1.corporativo')
-        .when('/'+'Imbabura/Tarifa',    's1.tarifa')
-        .when('/'+'Imbabura/Programacion',    's1.programacion')
-        .when('/'+'Imbabura/Podcast',    's1.podcast')
-        .when('/'+'Imbabura/Noticias',    's1.noticias')
-        .when('/'+'Imbabura/Contactos',    's1.contactos')
-        .when('/'+'Imbabura/Despertador',    's1.despertador')
-        .when('/'+'Imbabura/LaSartenPorElMango',    's1.sarten')
-        .when('/'+'Imbabura/Inbox',    's1.inbox')
-        .when('/'+'Imbabura/LosHP',    's1.hp')
-        .when('/'+'Imbabura/CodigoDeontologico',    's1.codigo')
-        .when('/'+'Imbabura/TarifasAsesor/:id',    's1.tarifasasesor')
         
         
         .when('/'+'SantoDomingo',    's2')
@@ -141,11 +104,11 @@
             // .segment('prefs', {
             //     templateUrl: 'templates/section1/prefs.html'})                
         .up()
-        .segment('s0', {
-            templateUrl: 'data/inicio/view/index.html',
+        .segment('registro', {
+            templateUrl: 'data/registro/view/index.html',
             // controller: 'homeCtrl'
         })   
-        .segment('s2', {
+        .segment('registroas', {
             templateUrl: 'data/imbabura/home.html',
             controller: 'homeCtrl'
         })
