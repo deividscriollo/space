@@ -1,5 +1,5 @@
     // create the module and name it scotchApp
-    var app = angular.module('dcApp', ['ngRoute', 'ngAnimate', 'route-segment', 'view-segment', 'ngMaterial']);
+    var app = angular.module('dcApp', ['ngMessages','ngRoute', 'ngAnimate', 'route-segment', 'view-segment', 'ngMaterial']);
 
     // app.factory('service', function($http){
     //     var service = {
@@ -67,3 +67,5 @@
         };
         return service;
     });
+
+
