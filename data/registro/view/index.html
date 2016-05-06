@@ -98,9 +98,9 @@
                             <label for="inputPassword" class="col-lg-2 control-label bmd-control-label"><i class="material-icons bmd-text-primary">account_box</i></label>
                             <div class="col-lg-9">
                                 <div class="bmd-field-group">
-                                    <input type="password" class="bmd-input" id="cedula" ng-model="data.cedula" name="cedula" ng-required="true">
+                                       <input class="bmd-input" id="cedula" name="cedula" ng-model="data.cedula" ng-required="true" ui-mask="9999999999" ui-mask-placeholder="" ui-mask-placeholder-char="" placeholder="Cédula">
                                     <span class="bmd-bar"></span>
-                                    <label class="bmd-label">Cèdula</label>
+                                    <label class="bmd-label"></label>
                                     <span class="bmd-field-feedback"></span>
                                 </div>
                                 <span for="correo" ng-show="formreg.cedula.$invalid && formreg.cedula.$touched">
@@ -127,7 +127,7 @@
                             <label for="inputEmail" class="col-lg-2 control-label bmd-control-label"><i class="flaticon-black402 bmd-text-primary"></i></label>
                             <div class="col-lg-9">
                                 <div class="bmd-field-group">
-                                    <input type="email" class="bmd-input" name="correo" ng-model="correo" required="">
+                                    <input type="email" class="bmd-input" name="correo" ng-model="correo" required="" >
                                     <span class="bmd-bar"></span>
                                     <label class="bmd-label">Correo</label>
                                     <span class="bmd-field-feedback"></span>
